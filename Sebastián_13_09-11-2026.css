@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.sobre-nosotros{
+    border: 2px solid black;
+    background-image: linear-gradient(to right,
+    transparent 50%, rgb(48, 47, 47) 10%,  rgb(29, 29, 30) 100%), url(../Imagenes/tiposdemuebles.jpg);
+    background-size: 100%, 80rem; /*tamaño es para el gradiente y 
+    el 2º es para la imagen */
+    padding: 20rem 0;
+    background-repeat: no-repeat;
+    background-position: center bottom left ;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.sobre-nosotros p{
+    grid-column: 2/3;
+    font-size: 3rem;
+    text-align: center;
+    color:white;
+    font-family: "Momo Trust Display", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    padding: 2rem;
+    background: linear-gradient(to right, rgb(213, 204, 72) 0%,  rgb(154, 84, 149) 0%, rgb(212, 26, 51) 30%, rgb(84, 104, 154) 50%,rgb(41, 128, 26) 100%);
+    cursor: url("../Imagenes/cursor.cur"), auto;
+}
+
+h1, h2, h3{
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    background-color: rgba(8, 8, 8, 0.5);
+    font-family: "Momo Trust Display", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+section{
+    display: flex;
+    height: 800px;   
+}
+
+section img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.7;
+    transition: 1s ease;
+}
+
+section img:hover{
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+section img:first-child{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+section img:last-child{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
